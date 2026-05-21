@@ -1,20 +1,3 @@
-# name: CI Pipeline
-
-# on:
-#   push:
-#     branches: [ main ]
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v4
-
-#       - name: Run a hello world script
-#         run: echo "Your CI/CD pipeline is running successfully!"
-
-
 name: Node CI
 
 on:
@@ -30,7 +13,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - run: npm ci
       - run: npm test
